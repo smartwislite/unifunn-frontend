@@ -1,0 +1,168 @@
+.common-confirm
+	position: fixed
+	top: 0
+	left: 0
+	width: 100vw
+	height: 100vh
+	background-color: rgba(#333333, 0.8)
+	transition: all 200ms $bezier
+	display: flex
+	flex-direction: column
+	justify-content: center
+	align-items: center
+	opacity: 0
+	visibility: hidden
+	z-index: 3
+	transition-delay: 100ms
+
+	&.active
+		opacity: 1
+		visibility: visible
+		transition-delay: 0
+
+		.center-wrap
+			opacity: 1
+			transform: scale(1)
+			transition-delay: 100ms
+
+	@media screen and (orientation: portrait)
+		padding: 5.33vw
+
+	.center-wrap
+		background: #FFFFFF
+		box-shadow: 0px 0.05vw 0.26vw rgba(0, 0, 0, 0.25)
+		border-radius: 2.34vw
+		width: 30%
+		max-width: 100%
+		padding: 2.60vw
+		transition: all 200ms $bezier
+		transition-delay: 0
+		opacity: 0
+		transform: scale(0.9)
+
+		@media screen and (max-width: 1366px)
+			border-radius: 3.52vw
+			padding: 3.66vw
+			width: 50%
+
+		@media screen and (max-width: 767px)
+			border-radius: 3.52vw
+			padding: 3.66vw
+			width: 75%
+
+		@media screen and (orientation: portrait)
+			box-shadow: 0px 0.27vw 1.33vw rgba(0, 0, 0, 0.25)
+			border-radius: 2.67vw
+			width: 100%
+			padding: 5.33vw
+
+		.title
+			font-size: 1.67vw
+			font-weight: 600
+			text-align: center
+
+			@media screen and (max-width: 1366px)
+				font-size: 2.80vw
+
+			@media screen and (max-width: 767px)
+				font-size: 4.67vw
+
+			@media screen and (orientation: portrait)
+				font-size: 6.40vw
+
+		.message
+			font-size: 1.04vw
+			text-align: center
+			margin-top: 1.56vw
+
+			@media screen and (orientation: portrait)
+				font-size: 4.80vw
+				margin-top: 8.00vw
+
+		.button-wrap
+			display: flex
+			justify-content: center
+			margin-top: 1.56vw
+
+			@media screen and (max-width: 1366px)
+				font-size: 4.80vw
+				
+			@media screen and (max-width: 767px)
+				margin-top: 3.56vw
+
+			@media screen and (orientation: portrait)
+				margin-top: 6.00vw
+
+			.button
+				width: 18.75vw
+				max-width: 100%
+				line-height: 2.45vw
+				text-align: center
+				background: $main-color-blue
+				border-radius: 0.83vw
+				color: #F2F2F2
+				font-size: 1vw
+				font-weight: 600
+				cursor: pointer
+				display: block
+				border: 0
+				margin: 0 0.52vw
+
+				@media screen and (max-width: 1366px)
+					font-size: 1.88vw
+					margin-inline: .77vw
+					line-height: 4.45vw
+					border-radius: 1.66vw
+
+				@media screen and (max-width: 767px)
+					font-size: 3.33vw
+					margin-inline: 1.33vw
+					line-height: 6.77vw
+					border-radius: 1.66vw
+
+				@media screen and (orientation: portrait)
+					width: 100%
+					line-height: 12.53vw
+					border-radius: 2.67vw
+					font-size: 4.80vw
+					margin: 0 2.67vw
+
+			.button.cancel
+				border: 1px solid $main-color-blue
+				background-color: white
+				color: $main-color-blue
+
+		input
+			display: block
+			width: 100%
+			// max-width: 100%
+			border: 1px solid #CED4DA
+			border-radius: 0.66vw
+			height: 2.60vw
+			font-size: 0.94vw
+			padding: 0 0.78vw
+			margin-top: 5vh
+			transition: all 200ms $bezier
+
+			&:focus
+				border-color: $main-color-blue
+
+			@media screen and (max-width: 1366px)
+				font-size: 1.88vw
+				border-radius: 1.66vw
+				padding-inline: 2vw
+				height: 4.6vw
+				    
+
+			@media screen and (max-width: 767px)
+				font-size: 2.88vw
+				border-radius: 2.26vw
+				padding-inline: 2.78vw
+				height: 8.6vw
+
+			@media screen and (orientation: portrait)
+				border-radius: 3.33vw
+				height: 13.33vw
+				font-size: 4.80vw
+				padding: 0 4.00vw
+				width: 100%

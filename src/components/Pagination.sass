@@ -1,0 +1,72 @@
+@import '../sass/variables'
+
+.Pagination
+	display: flex
+	justify-content: center
+	margin-top: 40px
+
+	@media screen and (max-width: 1366px)
+		margin-top: 2.93vw
+
+	@media screen and (max-width: 767px)
+		margin-top: 5.33vw
+
+	.center-wrap
+		display: flex
+		justify-content: center
+
+		.item
+			width: 26px
+			min-width: 26px
+			height: 26px
+			line-height: 24px
+			align-items: center
+			transition: all 300ms $bezier
+			margin: 0 4px
+			text-align: center
+			font-size: 16px
+			color: $font-color-light
+			cursor: pointer
+			border-radius: 50%
+
+			@media screen and (max-width: 1366px)
+				width: 1.90vw
+				min-width: 1.90vw
+				height: 1.90vw
+				line-height: 1.76vw
+				margin: 0 0.29vw
+				font-size: 1.17vw
+
+			@media screen and (max-width: 767px)
+				width: 6.93vw
+				min-width: 6.93vw
+				height: 6.93vw
+				line-height: 6.40vw
+				margin: 0 0.80vw
+				font-size: 3.27vw
+
+			&.active
+				color: #FCFCFC
+				background-color: $main-color-blue
+
+	.prev, .next
+		cursor: pointer
+
+		&:hover
+			.changeFill
+				fill: $main-color-blue
+
+		.slideArrow
+			width: 26px
+			height: 26px
+
+			@media screen and (max-width: 1366px)
+				width: 1.90vw
+				height: 1.90vw
+
+			@media screen and (max-width: 767px)
+				width: 6.93vw
+				height: 6.93vw
+
+		.changeFill
+			transition: all 300ms $bezier

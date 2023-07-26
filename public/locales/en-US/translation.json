@@ -1,0 +1,42 @@
+{
+    "navbar": {
+        "explore": "Explore",
+        "help_center": "Help center", 
+        "login": "Sign in", 
+        "search_placeholder": "Search items, collections", 
+        "menu_wallet": "My wallet", 
+        "search_collection_title": "Collections", 
+        "search_asset_title": "Items", 
+        "menu_collections": "My collections", 
+        "menu_create": "Create", 
+        "menu_setting": "Setting", 
+        "menu_tx_record": "Activities", 
+        "menu_redeem": "Redeem", 
+        "menu_transfer_point": "Send points", 
+        "menu_upgrade_account": "Upgrade", 
+        "menu_logout": "Logout"
+    }, 
+    "landing": {
+        "first_section_title": "Notable collections", 
+        "second_section_title": "Featured collections", 
+        "second_section_text_items": "Items", 
+        "second_section_text_date": "Created", 
+        "third_section_title": "All NFT", 
+        "third_section_select_cat_all": "All", 
+        "third_section_select_sort_old_new": "Oldest", 
+        "third_section_select_sort_new_old": "Newest", 
+        "third_section_select_sort_low_high": "Price low to high", 
+        "third_section_select_sort_high_low": "Price high to low", 
+        "third_section_card_listed_text_items": "Items", 
+        "third_section_card_listed_list_title": "Listings", 
+        "third_section_card_listed_list_name": "Name", 
+        "third_section_card_listed_list_price": "Unit Price", 
+        "third_section_card_listed_list_owner": "Owner", 
+        "third_section_card_subscriber_only": "Owner Only", 
+        "footer_about": "About UniFunn", 
+        "footer_copyright": "Copyright © 2022-2023 Wislite. All rights reserved.",
+        "footer_service_email": "Email", 
+        "footer_service_phone": "Phone", 
+        "footer_service_address": "Address"
+    }
+}

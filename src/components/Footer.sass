@@ -1,0 +1,158 @@
+@import '../sass/variables'
+
+#Footer
+	padding-top: 35px
+	padding-bottom: 70px
+	overflow: hidden
+
+	@media screen and (max-width: 1366px)
+		padding: 5.12vw 0
+
+	@media screen and (max-width: 767px)
+		padding: 5.33vw
+
+	.center-wrap
+		width: 1280px
+		margin: 0 auto
+
+		@media screen and (max-width: 1366px)
+			width: 93.70vw
+
+		@media screen and (max-width: 767px)
+			width: 100vw
+
+	.about-row
+		display: flex
+		justify-content: space-between
+		align-items: start
+		margin-bottom: 20px
+
+		@media screen and (max-width: 1366px)
+			margin-bottom: 1.46vw
+
+		@media screen and (max-width: 767px)
+			margin-bottom: 3.33vw
+			display: block
+
+		a.logo
+			font-size: 20px
+			display: flex
+			text-decoration: none
+			align-items: center
+
+			@media screen and (max-width: 1366px)
+				font-size: 1.67vw
+
+			@media screen and (max-width: 767px)
+				order: 2
+				font-size: 3.57vw
+
+			img
+				margin-right: 1vw
+				height: 30px
+
+				@media screen and (max-width: 1366px)
+					height: 2.87vw
+
+				@media screen and (max-width: 767px)
+					height: 7.00vw
+					margin-right: 3vw
+
+		.social
+			display: flex
+
+			@media screen and (max-width: 767px)
+				margin-top: 5.33vw
+
+			a
+				margin-left: 20px
+
+				@media screen and (max-width: 1366px)
+					margin-left: 1.46vw
+
+				@media screen and (max-width: 767px)
+					margin-left: 0
+					margin-right: 4.00vw
+
+				img
+					height: 30px
+
+					@media screen and (max-width: 1366px)
+						height: 2.20vw
+
+					@media screen and (max-width: 767px)
+						height: 8.00vw
+
+	.copyright-row
+		display: flex
+		justify-content: space-between
+		align-items: start
+
+		@media screen and (max-width: 767px)
+			flex-direction: column
+
+		.copyright
+			font-size: 18px
+
+			@media screen and (max-width: 1366px)
+				font-size: 1.67vw
+
+			@media screen and (max-width: 767px)
+				order: 2
+				font-size: 3.27vw
+
+			p
+				margin-top: 0
+
+			.info-list
+				width: 100%
+				padding: 0px
+				margin: 0px
+				display: grid
+				grid-template-columns: minmax(auto, 34px) minmax(auto, auto)
+				list-style-type: none
+				font-size: 16px
+
+				li
+					display: contents
+					list-style-type: none
+
+					div[role='cell']
+						margin-bottom: 10px
+						display: flex
+						align-items: center
+						a
+							text-decoration: none
+
+				@media screen and (max-width: 1366px)
+					font-size: 1.37vw
+
+				@media screen and (max-width: 767px)
+					font-size: 2.67vw
+
+		.language-chooser
+			display: flex
+			align-items: center
+			font-size: 16px
+
+			.chooser-prefix
+				margin-right: 0.7rem
+
+			@media screen and (max-width: 1366px)
+				font-size: 1.33vw
+
+			@media screen and (max-width: 767px)
+				font-size: 3.27vw
+				margin-bottom: 1.67vw
+
+			.css-13cymwt-control
+				border-radius: 10px
+
+			.css-t3ipsp-control
+				border-radius: 10px
+
+			.css-14h4o58-menu
+				border-radius: 10px
+
+			.css-1n6sfyn-MenuList
+				padding-block: 8px
