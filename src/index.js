@@ -11,7 +11,7 @@ import Modal from './components/Modal';
 
 import './i18n';
 
-axios.defaults.baseURL = 'http://api.unifunn.com/api/v2';
+axios.defaults.baseURL = 'http://api.unifunn.com/api/v3';
 
 function Loading() {
 	return <span>Loading...</span>;
