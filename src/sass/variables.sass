@@ -1,0 +1,35 @@
+$font-color-normal: #333333
+$font-color-light: #6F6F6F
+$font-color-hover: #F2F2F2
+// $main-color-blue: #2E5276
+$main-color-blue: #1d5ae9
+$main-color-blue-hover: #2d66eb
+$main-color-light-blue: #1d5ae9
+$bg-color-light: #F6F1F1
+
+$bezier: cubic-bezier(0.68, 0, 0.265, 1)
+
+@mixin placeholder($color: red, $font-weight: 400)
+	&::-webkit-input-placeholder
+		color: $color
+		font-weight: $font-weight
+
+	&:-ms-input-placeholder
+		color: $color
+		font-weight: $font-weight
+
+	&::placeholder
+		color: $color
+		font-weight: $font-weight
+
+@mixin removeSelectArrow()
+	appearance: none
+
+	&::-ms-expand
+		display: none
+
+@mixin multiLineEllipsis($lineCount: 2)
+	display: -webkit-box
+	-webkit-box-orient: vertical
+	-webkit-line-clamp: $lineCount
+	overflow: hidden

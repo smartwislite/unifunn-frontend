@@ -1,0 +1,29 @@
+@import '../sass/variables'
+
+#MainLayout
+	&.paper-texture
+		background-image: linear-gradient(to top, #fff 70%, rgba(245, 246, 252, 0.52) 100%), url(../assets/background-mesh.png)
+		background-repeat: no-repeat
+		background-size: 1920px auto
+		// background-size: cover
+		background-position: center top
+		transition: background 0.3s linear 0s
+
+		@media screen and (max-width: 1366px)
+			background-size: 140.56vw auto
+
+		@media screen and (max-width: 767px)
+			background-size: 512.00vw auto
+
+	.layout-center-wrap
+		width: 1280px
+		margin: 0 auto
+		padding: 100px 0
+
+		@media screen and (max-width: 1366px)
+			width: 93.70vw
+			padding: 7.32vw 0
+
+		@media screen and (max-width: 767px)
+			width: 100vw
+			padding: 5.33vw

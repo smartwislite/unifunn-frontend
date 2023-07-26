@@ -1,0 +1,4 @@
+Paypal
+
+Client ID: Ad4RxqYOpBH-z6EOnk8a8oS45kcDwOTwhLeS2RjT7rY9OjUUfXi3hQzhD-mbAe4QdxQJll7Z53zxxAbh
+Secret: EAfwEB9dSBMjjeV4yGLJGC93RWisIP2qaTgC03Q6xh-QuRVbnBf1RyW3SuzhixY7Jo6o4hjRPx5ohEzg

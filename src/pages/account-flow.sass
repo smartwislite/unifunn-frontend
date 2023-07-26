@@ -1,0 +1,224 @@
+@import '../sass/variables'
+
+$bg: '../assets/background-mesh.png'
+
+.account-flow
+	// background-image: url(../assets/signup-bg-d.svg)
+	background-position: center
+	background-size: cover
+	min-height: 100vh
+	display: flex
+	flex-direction: column
+	justify-content: center
+	align-items: center
+
+	@media screen and (orientation: portrait)
+		// background-image: url(../assets/signup-bg-m.svg)
+		background-image: url($bg)
+		object-fit: cover
+
+	&.flex
+		display: flex
+		flex-direction: row
+
+		@media screen and (orientation: portrait)
+			display: block
+
+		.left-wrap
+			width: 50%
+			height: 100vh
+			padding: 7.81vw
+			display: flex
+			flex-direction: column
+			justify-content: center
+			background-image: url($bg)
+			background-size: cover
+			background-position: center
+
+			@media screen and (orientation: portrait)
+				width: 100%
+				height: auto
+				padding: 13.33vw 5.33vw 5.33vw 5.33vw
+				background-image: unset
+
+			.wrapper
+				padding: 3rem
+				border-radius: 1.67rem
+				backdrop-filter: blur(10px)
+
+			a.logo
+				img
+					filter: drop-shadow(0px 0px 10px #fff)
+					-webkit-filter: drop-shadow(0px 0px 10px #fff)
+					height: 3.60vw
+
+					@media screen and (orientation: portrait)
+						height: 12vw
+
+			.heading
+				margin: 1.56vw 0
+				font-size: 2.33vw
+				letter-spacing: 0.1em
+				font-weight: 800
+				color: white
+				text-shadow: 2px 3px 6px rgba(0,0,0,0.4)
+				@media screen and (orientation: portrait)
+					margin: 4.00vw 0
+					font-size: 6.40vw
+
+			.intro
+				font-size: 1.25vw
+				line-height: 150%
+				color: white
+
+				@media screen and (orientation: portrait)
+					font-size: 3.73vw
+
+		.wrap
+			width: 50%
+			background-color: white
+			height: 100vh
+			display: flex
+			flex-direction: column
+			justify-content: center
+			align-items: center
+
+			@media screen and (orientation: portrait)
+				width: 100%
+				background-color: unset
+				padding-top: 0
+				height: unset
+
+		.forgot-password-link
+			display: flex
+			justify-content: flex-end
+			margin-top: -0.78vw
+			margin-bottom: 2.08vw
+			text-decoration: none
+
+			a
+				font-size: 0.83vw
+				color: #6F6F6F
+				text-decoration: none
+				transition: all 200ms $bezier
+
+				&:hover
+					color: $main-color-blue
+
+				@media screen and (orientation: portrait)
+					font-size: 3.20vw
+
+	.wrap
+		padding: 3.65vw 1.04vw
+
+		@media screen and (orientation: portrait)
+			padding: 13.33vw 5.33vw
+			width: 100%
+
+	.logo-wrap
+		margin-bottom: 2.60vw
+		display: flex
+		justify-content: center
+
+		@media screen and (orientation: portrait)
+			margin-bottom: 8.00vw
+
+		img
+			height: 3.60vw
+
+			@media screen and (orientation: portrait)
+				height: 12vw
+
+	.form
+		padding: 2.60vw
+		background-color: white
+		border-radius: 2.04vw
+		width: 23.96vw
+		max-width: 100%
+
+		@media screen and (orientation: portrait)
+			width: 100%
+			border-radius: 3.67vw
+			padding: 8.00vw 5.33vw
+
+		.form-title
+			font-size: 1.67vw
+			font-weight: 600
+			// letter-spacing: 0.52vw
+			text-align: center
+
+			@media screen and (orientation: portrait)
+				font-size: 6.40vw
+				letter-spacing: 2.67vw
+
+		.input-wrap
+			margin: 1.04vw 0
+
+			@media screen and (orientation: portrait)
+				margin: 4.00vw 0
+
+			.label
+				font-size: 0.94vw
+				margin-bottom: 0.78vw
+
+				@media screen and (orientation: portrait)
+					font-size: 4.80vw
+					margin-bottom: 4.00vw
+
+			input
+				display: block
+				width: 100%
+				border: 1px solid #CED4DA
+				border-radius: 10px
+				height: 2.60vw
+				font-size: 0.94vw
+				padding: 0 0.78vw
+				transition: all 200ms $bezier
+
+				&:focus
+					border-color: $main-color-blue
+
+				@media screen and (orientation: portrait)
+					// border-radius: 1.33vw
+					height: 13.33vw
+					font-size: 4.80vw
+					padding: 0 4.00vw
+
+		.button
+			margin-bottom: 1.04vw
+			height: 2.60vw
+			line-height: 2.60vw
+			border-radius: .67rem
+			background-color: $main-color-blue
+			color: #F2F2F2
+			font-size: 0.94vw
+			font-weight: 600
+			text-align: center
+			cursor: pointer
+			display: block
+			border: 0
+			width: 100%
+
+			@media screen and (orientation: portrait)
+				margin-bottom: 4.00vw
+				height: 13.33vw
+				line-height: 13.33vw
+				// border-radius: 2.67vw
+				font-size: 4.80vw
+
+		.link-wrap
+			display: flex
+			justify-content: center
+			font-size: 0.94vw
+
+			@media screen and (orientation: portrait)
+				font-size: 4.80vw
+
+			a
+				margin-left: 5px
+				color: #828282
+				text-decoration: none
+				transition: all 200ms $bezier
+
+				&:hover
+					color: $main-color-blue

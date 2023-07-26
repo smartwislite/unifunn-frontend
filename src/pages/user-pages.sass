@@ -1,0 +1,663 @@
+@import '../sass/variables'
+
+.user-pages
+	display: block
+
+	a
+		text-decoration: none
+
+	.blue
+		color: $main-color-blue
+
+	.page-title
+		font-size: 36px
+		font-weight: 600
+		margin-bottom: 40px
+
+		// @media screen and (max-width: 1366px)
+		// 	font-size: 2.64vw
+		// 	margin-bottom: 2.93vw
+
+		@media screen and (max-width: 767px)
+			font-size: 4.40vw
+			margin-bottom: 15px
+
+	.display-row
+		display: flex
+		border-bottom: 1px solid #DAE1E9
+		padding: 30px 0
+
+		// @media screen and (max-width: 1366px)
+		// 	border-bottom: 0.07vw solid #DAE1E9
+		// 	padding: 2.20vw 0
+
+		@media screen and (max-width: 767px)
+			padding: 4.00vw 0
+
+		.heading
+			width: 100px
+			min-width: 100px
+			font-size: 16px
+			font-weight: 600
+			line-height: 30px
+
+			// @media screen and (max-width: 1366px)
+			// 	width: 7.32vw
+			// 	min-width: 7.32vw
+			// 	font-size: 1.17vw
+			// 	line-height: 2.20vw
+
+			@media screen and (max-width: 767px)
+				width: 26.67vw
+				min-width: 26.67vw
+				font-size: 4.27vw
+				line-height: 8.00vw
+
+		.text
+			color: $font-color-light
+			line-height: 30px
+			word-break: break-all
+
+			// @media screen and (max-width: 1366px)
+			// 	line-height: 2.20vw
+
+			@media screen and (max-width: 767px)
+				line-height: 8.00vw
+
+		.bold
+			font-weight: 600
+
+		.large
+			font-size: 24px
+
+			// @media screen and (max-width: 1366px)
+			// 	font-size: 1.76vw
+
+			@media screen and (max-width: 767px)
+				font-size: 6.40vw
+
+	form
+		width: 700px
+		max-width: 100%
+
+		@media screen and (max-width: 1366px)
+			width: 100%
+
+		@media screen and (max-width: 767px)
+			width: 100%
+
+		.input-wrap
+			margin-bottom: 30px
+
+			// @media screen and (max-width: 1366px)
+			// 	margin-bottom: 2.20vw
+
+			@media screen and (max-width: 767px)
+				margin-bottom: 8.00vw
+
+			.label
+				font-weight: 600
+				font-size: 18px
+				margin-bottom: 10px
+				margin-top: 20px
+
+				// @media screen and (max-width: 1366px)
+				// 	font-size: 1.32vw
+				// 	margin-bottom: 1.76vw
+
+				@media screen and (max-width: 767px)
+					font-size: 3.27vw
+					margin-bottom: 2.00vw
+
+			input
+				width: 100%
+				display: block
+				border: 1px solid #CED4DA
+				border-radius: 13px
+				height: 50px
+				line-height: 48px
+				font-size: 18px
+				padding: 0 15px
+				transition: all 200ms $bezier
+
+				&:focus
+					border-color: $main-color-blue
+
+				// @media screen and (max-width: 1366px)
+				// 	border: 0.07vw solid #CED4DA
+				// 	border-radius: 0.37vw
+				// 	height: 3.66vw
+				// 	line-height: 3.51vw
+				// 	font-size: 1.32vw
+				// 	padding: 0 1.10vw
+
+			input[type='checkbox']
+				cursor: pointer
+				width: 47px
+				// border-radius: 13px
+				// clip-path: inset(3% round 10px)
+				// @media screen and (max-width: 1366px)
+				// 	width: 3.66vw
+
+				&:checked
+					border: none
+
+			&.checkbox
+				display: flex
+				align-items: flex-start
+				justify-content: space-between
+
+				.label
+					margin-block: 0
+
+			textarea
+				width: 100%
+				border: 1px solid #CED4DA
+				border-radius: 13px
+				padding: 15px
+				font-size: 18px
+				height: 110px
+
+				// @media screen and (max-width: 1366px)
+				// 	border: 0.07vw solid #CED4DA
+				// 	border-radius: 0.37vw
+				// 	padding: 1.10vw
+				// 	font-size: 1.32vw
+				// 	height: 8.05vw
+
+			.css-13cymwt-control, .css-t3ipsp-control
+				border-radius: 12px
+				border-color: #CED4DA
+
+			.css-1nmdiq5-menu
+				border-radius: 12px
+				padding-block: 6px
+
+			.css-d7l1ni-option, .css-10wo9uf-option, .css-tr4s17-option
+				padding:12px 18px
+
+			.css-1fdsijx-ValueContainer
+				padding-inline: 14px
+
+
+		.button-wrap
+			margin-top: 40px
+
+			// @media screen and (max-width: 1366px)
+			// 	margin-top: 2.93vw
+
+			&.flex
+				display: flex
+
+				@media screen and (max-width: 767px)
+					display: block
+
+				.cancel
+					margin-right: 10px
+
+					// @media screen and (max-width: 1366px)
+					// 	margin-right: 0.73vw
+
+					@media screen and (max-width: 767px)
+						margin-bottom: 10px
+						margin-right: 0
+
+			button
+				display: block
+				width: 100%
+				line-height: 50px
+				border: 0
+				background-color: $main-color-blue
+				border-radius: 10px
+				color: #F2F2F2
+				font-size: 16px
+				cursor: pointer
+				font-weight: 600
+				
+				&.disabled
+					background-color: gray
+					cursor: default
+
+	.table-wrap
+		table
+			width: 100%
+			text-align: center
+			border-collapse: collapse
+			thead
+				tr
+					background-color: $font-color-hover
+				th
+					background-color: #FFF
+					height: 60px
+					color: $font-color-normal
+					font-weight: 600
+					font-size: 16px
+
+					@media screen and (max-width: 767px)
+						white-space: nowrap
+			tbody
+				tr
+					&:nth-of-type(even)
+						background-color: #f7f4f4
+
+				td
+					padding: 25px 25px
+					font-size: 16px
+					max-width: 100px
+
+					&.ellipsis
+						overflow: hidden
+						white-space: nowrap
+						text-overflow: ellipsis
+
+					&.blue
+						color: $main-color-blue
+
+					@media screen and (max-width: 767px)
+						padding: 4.00vw
+
+		table, tr 
+			border: 1px solid #D8D8D8
+			border-left: none
+			border-right: none
+			border-collapse: collapse
+
+	.avatar
+		width: 100px
+		height: 100px
+		border-radius: 50%
+		background-size: cover
+		background-position: center
+		display: flex
+		flex-direction: column
+		justify-content: center
+		align-items: center
+		font-size: 20px
+
+		input
+			display: none
+
+	.input-flex-wrap
+		display: flex
+		border-bottom: 1px solid #DAE1E9
+		padding: 25px 0
+
+		@media screen and (max-width: 767px)
+			padding: 15px 0
+			display: block
+			border: none
+			padding: 5px 0
+
+		.label
+			width: 160px
+			min-width: 160px
+			font-weight: 600
+			line-height: 50px
+
+			@media screen and (max-width: 767px)
+				width: 120px
+				min-width: 120px
+
+		input
+			width: 500px
+			max-width: 100%
+			border: 1px solid #CED4DA
+			border-radius: 12px
+			font-size: 16px
+			padding: 0 15px
+
+			@media screen and (max-width: 767px)
+				height: 40px
+				width: 100%
+
+		.current-value
+			font-size: 16px
+			line-height: 24px
+			padding: 13px 0
+			word-break: break-all
+
+	&#UserCollections, &#UserCollection
+		.empty-wrap
+			height: 500px
+			display: flex
+			flex-direction: column
+			justify-content: center
+			align-items: center
+			background-color: #F8F8F8
+
+			.title
+				font-size: 32px
+				margin-bottom: 40px
+
+		.button-add
+			display: flex
+			background: $main-color-blue
+			border-radius: 10px
+			padding: 0 20px
+			cursor: pointer
+
+			.icon
+				width: 26px
+				min-width: 26px
+				height: 50px
+				margin-right: 10px
+				background-image: url(../assets/icon-add.svg)
+				background-repeat: no-repeat
+				background-position: center
+				background-size: 26px
+
+			.text
+				line-height: 50px
+				color: #F2F2F2
+				font-size: 16px
+				font-weight: 500
+
+		.popup-wrap
+			position: fixed
+			top: 0
+			left: 0
+			width: 100vw
+			height: 100vh
+			background-color: rgba(#333333, 0.8)
+			transition: all 200ms $bezier
+			display: flex
+			flex-direction: column
+			justify-content: center
+			align-items: center
+			opacity: 0
+			visibility: hidden
+			z-index: 3
+			transition-delay: 100ms
+
+			&.active
+				opacity: 1
+				visibility: visible
+				transition-delay: 0
+
+				.center-wrap
+					opacity: 1
+					transform: scale(1)
+					transition-delay: 100ms
+
+			// @media screen and (orientation: portrait)
+			// 	padding: 5.33vw
+
+			.flow-wrap
+				height: 100vh
+				padding: 50px
+				overflow-y: auto
+				-ms-overflow-style: none
+				scrollbar-width: none
+				
+				&::-webkit-scrollbar
+					display: none
+
+				@media screen and (max-width: 767px)
+					padding: 30px
+					width: 100%
+
+			.center-wrap
+				background: #FFFFFF
+				box-shadow: 0px 0.05vw 0.26vw rgba(0, 0, 0, 0.25)
+				border-radius: 0.52vw
+				width: 880px
+				max-width: 100%
+				padding: 50px 60px
+				transition: all 200ms $bezier
+				transition-delay: 0
+				opacity: 0
+				transform: scale(0.95)
+				position: relative
+
+				// @media screen and (orientation: portrait)
+				// 	box-shadow: 0px 0.27vw 1.33vw rgba(0, 0, 0, 0.25)
+				// 	border-radius: 2.67vw
+				// 	width: 100%
+				// 	padding: 5.33vw
+
+				@media screen and (max-width: 767px)
+					width: 100%
+					padding: 30px
+
+				.close-popup
+					position: absolute
+					width: 66px
+					height: 66px
+					background-image: url(../assets/icon-close.svg)
+					background-size: 26px
+					background-position: center
+					background-repeat: no-repeat
+					right: 0
+					top: 0
+					cursor: pointer
+
+				.popup-title
+					font-weight: 600
+					font-size: 36px
+					text-align: center
+					margin-bottom: 35px
+
+					@media screen and (max-width: 767px)
+						font-size: 24px
+						margin-bottom: 25px
+
+				.form-wrap
+					display: flex
+
+					@media screen and (max-width: 767px)
+						display: block
+
+					.cover-preview
+						width: 350px
+						min-width: 350px
+						height: 350px
+						margin-right: 50px
+						display: flex
+						flex-direction: column
+						justify-content: center
+						align-items: center
+						font-size: 20px
+						background-position: center
+						background-size: cover
+						cursor: pointer
+						border-radius: 1.67rem
+
+						@media screen and (max-width: 767px)
+							width: 100%
+							min-width: 100%
+							height: auto
+							aspect-ratio: 1 / 1
+							margin: 0 auto
+							margin-bottom: 30px
+
+						input
+							display: none
+
+					video
+						width: 350px
+						min-width: 350px
+						margin-right: 50px
+
+						@media screen and (max-width: 767px)
+							width: 100%
+							min-width: 100%
+							margin: 0 auto
+							margin-bottom: 30px
+
+		.all-wrap
+			margin-top: 40px
+
+		.position-wrap
+			position: relative
+
+			.button-add
+				position: absolute
+				top: 0
+				right: 0
+
+				@media screen and (max-width: 767px)
+					position: static
+					display: flex
+					justify-content: center
+					margin-bottom: 15px
+
+		.page-title
+			line-height: 50px
+
+			a
+				text-decoration: none
+
+				&:hover
+					text-decoration: underline
+
+		table
+			width: 100%
+			border-collapse: collapse
+			margin-top: 25px
+
+			@media screen and (max-width: 767px)
+				margin-top: 15px
+
+			.left
+				text-align: left
+
+			.right
+				text-align: right
+
+			.center
+				text-align: center
+
+			.nowrap
+				white-space: nowrap
+
+			.grow
+				width: 100%
+
+			.edit
+				color: $main-color-blue
+				cursor: pointer
+				font-weight: 500
+
+			th
+				padding: 20px
+				font-size: 16px
+				color: #6F6F6F
+				font-weight: 400
+				border-bottom: 1px solid #DAE1E9
+
+				@media screen and (max-width: 767px)
+					padding: 10px
+
+			td
+				padding: 20px
+				font-size: 20px
+				font-weight: 500
+				border-bottom: 1px solid #DAE1E9
+
+				&.link
+					cursor: pointer
+
+					&:hover
+						.name
+							color: $main-color-blue
+
+				@media screen and (max-width: 767px)
+					padding: 10px
+
+			.flex
+				display: flex
+
+			.cover
+				width: 70px
+				min-width: 70px
+				height: 70px
+				background-size: cover
+				background-position: center
+				margin-right: 21px
+				overflow: hidden
+				object-fit: cover
+				border-radius: 13px
+
+				@media screen and (max-width: 767px)
+					width: 50px
+					min-width: 50px
+					height: 50px
+
+				video
+					width: 100%
+
+			.name
+				display: flex
+				flex-direction: column
+				justify-content: center
+				height: 70px
+				font-weight: 600
+				font-size: 20px
+				width: 100%
+				overflow: hidden
+				// white-space: nowrap
+				text-overflow: ellipsis
+
+				@media screen and (max-width: 767px)
+					font-size: 3vw
+					height: 50px
+
+				@media screen and (max-width: 467px)
+					font-size: 3.6vw
+
+	select.filter
+		@include removeSelectArrow()
+		border: 0
+		border-radius: 8px
+		padding: 0 20px 0 10px
+		font-size: 16px
+		background-size: 20px
+		background-repeat: no-repeat
+		background-position: right center
+		height: 40px
+		line-height: 38px
+		min-width: 200px
+		margin-bottom: 30px
+
+	.paypal-button-wrap
+		margin-top: 50px
+		width: 700px
+		max-width: 100%
+
+	.actions-menu-btn
+		width: 40px
+		height: 40px
+		padding: 6px 8px
+		display: inline-flex
+		flex-direction: row
+		-webkit-box-align: center
+		align-items: center
+		border-radius: 50%
+		-webkit-box-pack: center
+		justify-content: center
+		font-size: 16px
+		font-weight: 600
+		line-height: 22px
+		letter-spacing: 0.01em
+		background-color: #fff
+		border: 0
+		color: $font-color-normal
+
+		&:active
+			background-color: rgba(229, 232, 235, 0.4)
+			box-shadow: none
+
+		&:hover
+			box-shadow: 0px 0px 1rem rgba(0, 0, 0, 0.1)
+
+	.szh-menu
+		border-radius: 12px
+		padding: .5rem
+
+		.szh-menu__item
+			border-radius: 8px
+			margin-bottom: 3px
+			padding: .67rem .89rem
+
+			&:last-child
+				margin-bottom: 0

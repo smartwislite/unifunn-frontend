@@ -1,0 +1,558 @@
+@import '../sass/variables'
+
+@import url('https://fonts.googleapis.com/css2?family=Tilt+Warp&display=swap')
+
+$logo-font: 'Tilt Warp', cursive
+
+#header-filler
+	height: 75px
+
+	@media screen and (max-width: 1366px)
+		height: 6.49vw
+
+	@media screen and (max-width: 767px)
+		height: 13.33vw
+
+#Header
+	--header-height: 80px
+	position: fixed
+	top: 0
+	left: 0
+	width: 100vw
+	height: var(--header-height)
+	padding: 0 48px
+	// background: linear-gradient(180deg, #F2F2F2 0%, rgba(242, 242, 242, 0) 100%)
+	background-color: none
+	display: flex
+	justify-content: space-between
+	z-index: 3
+	// box-shadow: 0px 0px 8px rgba(0,0,0,.2)
+	transition: background-color .4s
+	// border-bottom: 2px solid rgba(255, 255, 255, .05)
+
+	&.active
+		background-color: #fff
+		box-shadow: 0px 2px 1rem rgba(0,0,0,.1)
+
+	@media screen and (max-width: 1366px)
+		--header-height: 71px
+		padding: 0 3.15vw
+
+	@media screen and (max-width: 767px)
+		--header-height: 80px
+		padding: 0 5.33vw
+		padding-right: 4vw
+
+	.logo-wrap
+		padding-left: 0
+		padding-bottom: 0
+		padding-right: 30px
+		padding-top: 0
+		display: flex
+		-webkit-box-align: center
+		align-items: center
+
+		// @media screen and (max-width: 1366px)
+		// 	padding-top: 1vw
+
+		// @media screen and (max-width: 767px)
+		// 	padding-top: 2vw
+
+		img
+			// border: 2px solid white
+			max-height: 60%
+			margin-right: 8px
+
+			@media screen and (max-width: 1366px)
+				max-height: 57%
+			// 	height: 2.93vw
+
+			@media screen and (max-width: 767px)
+				margin-right: 0
+				max-height: 67%
+			// 	height: 8.00vw
+
+		span
+			font-family: $logo-font
+			margin-left: 10px
+			font-size: 30px
+
+	nav
+		display: flex
+		line-height: var(--header-height)
+		font-weight: normal
+
+		@media screen and (max-width: 1366px)
+			line-height: 6.49vw
+
+		@media screen and (max-width: 767px)
+			line-height: 13.33vw
+
+		.nav-link
+			position: relative
+			padding-right: 30px
+			padding-left: 0
+			// margin-inline: 4px
+			transition: .3s
+			font-weight: 500
+
+			&.active
+				// border-bottom: 3px solid $main-color-blue
+
+			&:hover
+				color: #5f5f5f
+				
+			.nav-btn
+				display: flex
+				justify-content: flex-start
+				align-items: center
+				height: 70%
+				border-radius: 13px
+				border: 1px solid rgb(227, 227, 227)
+				padding-inline: 1.3vw
+				background-color: rgba(255, 255, 255, 0.8)
+
+				@media screen and (max-width: 1366px)
+					height: 63%
+				@media screen and (max-width: 767px)
+					border: none
+
+				&:hover
+					color: #5f5f5f
+
+					svg
+						fill: #5f5f5f
+
+				svg
+					margin-right: 10px
+					@media screen and (max-width: 767px)
+						margin-right: 0
+
+					
+
+			@media screen and (max-width: 1366px)
+				padding-right: 1.3vw
+
+			@media screen and (max-width: 767px)
+				padding-right: 1.7vw
+
+			@media screen and (max-width: 530px)
+				padding-right: 2vw
+
+	.logged-in
+		display: flex
+
+	a
+		white-space: nowrap
+		text-decoration: none
+		padding: 0 20px
+		font-size: 1.2rem
+		display: flex
+		justify-content: flex-start
+		align-items: center
+
+		@media screen and (max-width: 1366px)
+			padding: 0 1.3vw
+			font-size: 19px
+
+		@media screen and (max-width: 1024px)
+			padding: 0 1.3vw
+			font-size: 17px
+
+		@media screen and (max-width: 767px)
+			padding: 0 2.7vw 0 1.7vw
+			font-size: 3vw
+
+		@media screen and (max-width: 530px)
+			padding: 0 2.9vw 0 2vw
+			font-size: 1rem
+
+	.avatar
+		--avatar-size: calc(var(--header-height) * .7)
+		width: var(--avatar-size)
+		display: flex
+		display: -ms-flexbox
+		display: -webkit-flex
+		-ms-flex-align: center
+		-webkit-align-items: center
+		-webkit-box-align: center
+		align-items: center
+		cursor: pointer
+
+		margin-left: 0
+		position: relative
+
+		@media screen and (max-width: 1366px)
+			margin-left: 0
+			--avatar-size: calc(var(--header-height) * .65)
+
+		@media screen and (max-width: 767px)
+			margin-left: 0
+			--avatar-size: calc(var(--header-height) * .68)
+
+		&:hover
+			.hover-navs
+				padding: 10px
+				opacity: 1
+				visibility: visible
+
+				@media screen and (max-width: 767px)
+					opacity: 0
+					visibility: hidden
+
+		.avatar-image
+			border: 3px solid white
+			object-fit: cover
+			width: var(--avatar-size)
+			height: var(--avatar-size)
+			border-radius: 50%
+
+		.outer-wrap
+			@media screen and (max-width: 767px)
+				position: fixed
+				top: 0
+				left: 0
+				width: 100vw
+				height: 100vh
+				background-color: rgba(#333333, 0.8)
+				transition: all 200ms $bezier
+				opacity: 0
+				visibility: hidden
+				display: flex
+				justify-content: flex-end
+
+				&.active
+					opacity: 1
+					visibility: visible
+
+					.hover-navs
+						opacity: 1
+						visibility: visible
+						display: block
+						transform: translateX(0)
+
+						.navs-inner
+							overflow: auto
+							max-height: calc(100vh - 13.33vw)
+							-ms-overflow-style: none
+							scrollbar-width: none
+							
+							&::-webkit-scrollbar
+								display: none
+
+		.hover-navs
+			position: absolute
+			width: 210px
+			top: 113%
+			right: calc(100% - 65px)
+			background: #FFFFFF
+			box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.25)
+			border-radius: 15px
+			transition: all 100ms $bezier
+			overflow: hidden
+			opacity: 0
+			visibility: hidden
+
+			@media screen and (max-width: 1366px)
+				// width: 180px
+				right: 0.76vw
+				box-shadow: 0px 0.07vw 0.37vw rgba(0, 0, 0, 0.25)
+				border-radius: 1.44vw
+
+			@media screen and (max-width: 767px)
+				width: 79.20vw
+				height: 100%
+				top: 0
+				left: unset
+				right: 0
+				position: static
+				opacity: 0
+				transition: all 200ms $bezier
+				transition-delay: 100ms
+				transform: translateX(5.33vw)
+				visibility: hidden
+				svg
+					// visibility: hidden
+
+			.top-row
+				display: none
+
+				@media screen and (max-width: 767px)
+					display: block
+					height: 13.33vw
+					border-bottom: 1px solid #E0E0E0
+					display: flex
+					justify-content: flex-end
+
+				.close
+					width: 13.33vw
+					height: 100%
+					background-image: url(../assets/header-icon-close.svg)
+					background-repeat: no-repeat
+					background-position: center
+					background-size: 5.33vw
+
+			.navs-inner
+				@media screen and (max-width: 767px)
+					padding: 2.33vw
+
+			a, .logout
+				display: flex
+				justify-content: flex-start
+				align-items: center
+				padding: 5px
+				line-height: 42px
+				font-size: 17px
+				font-weight: 500
+				color: $font-color-normal
+				cursor: pointer
+
+				&.active, &:hover
+					border-radius: 8px
+					background-color: $bg-color-light
+
+				svg
+					margin: 0 15px 0 10px
+
+				@media screen and (max-width: 1366px)
+					line-height: 3.6vw
+					font-size: 16px
+
+				@media screen and (max-width: 767px)
+					line-height: 13.33vw
+					font-size: 5.33vw
+					color: $font-color-normal
+
+					&.active, &:hover
+						color: $font-color-normal
+
+			a
+				margin-bottom: 3px
+				&:last-child
+					margin-bottom: 0
+				// @media screen and (max-width: 767px)
+				// 	border: 0
+
+	.search-wrap
+		display: flex
+		align-items: center
+		position: relative
+		z-index: 1
+		padding-right: 30px
+
+		@media screen and (max-width: 1366px)
+			padding-right: 1.3vw
+
+		@media screen and (max-width: 767px)
+			position: fixed
+			top: 0
+			left: 0
+			width: 100%
+			display: none
+			padding-right: 0
+
+			&.active
+				display: flex
+				background-color: $bg-color-light
+
+		
+
+		input
+			height: 70%
+			width: 400px
+			background-color: rgba(255, 255, 255, 0.6)
+			border: 1px solid rgb(227, 227, 227)
+			border-radius: 13px
+			font-size: 16px
+			padding-left: 50px
+			-webkit-transition: all 0.30s ease-in-out
+			-moz-transition: all 0.30s ease-in-out
+			-ms-transition: all 0.30s ease-in-out
+			-o-transition: all 0.30s ease-in-out
+
+			&:focus
+				box-shadow: 0 1px 8px 0px rgba(0,0,0,0.1)
+				-webkit-box-shadow: 0 1px 8px 0px rgba(0,0,0,0.1)
+				-moz-box-shadow: 0 1px 8px 0px rgba(0,0,0,0.1)
+				background-color: #fff
+
+			@media screen and (max-width: 1366px)
+				height: 63%
+				width: 29.28vw
+				border: 0.07vw solid #CED4DA
+				border-radius: 1.2vw
+				font-size: 15px
+				padding-left: 4.3vw
+
+			@media screen and (max-width: 767px)
+				width: 100%
+				height: 13.33vw
+				border: 0.27vw solid #CED4DA
+				border-radius: 0
+				font-size: 3.73vw
+				padding-left: 13.33vw
+
+		.clear-search
+			width: 50px
+			height: 50px
+			position: absolute
+			// top: 25px
+			right: 0
+			background-image: url(../assets/icon-cross.svg)
+			background-size: 20px
+			background-position: center
+			background-repeat: no-repeat
+			cursor: pointer
+			display: none
+
+			&.active
+				display: block
+
+			@media screen and (max-width: 1366px)
+				width: 3.66vw
+				height: 3.66vw
+				// top: 1.56vw
+				background-size: 1.46vw
+
+			@media screen and (max-width: 767px)
+				width: 13.33vw
+				height: 13.33vw
+				top: 0
+				background-size: 5.33vw
+				display: block
+
+		.search-icon
+			display: flex
+			// flex-direction: column
+			align-items: center
+			justify-content: center
+			width: 28px
+			height: 28px
+			position: absolute
+			left: 1rem
+
+			@media screen and (max-width: 1366px)
+				width: 2.33vw
+				height: 100%
+
+			@media screen and (max-width: 767px)
+				width: 8.33vw
+				height: 100%
+				left: 3vw
+
+		.search-result
+			width: 100%
+			position: absolute
+			top: 100%
+			left: 0
+			background: #FFFFFF
+			border: 1px solid #CED4DA
+			border-radius: 13px
+			padding: 15px
+			max-height: 300px
+			overflow: auto
+
+			-ms-overflow-style: none
+			scrollbar-width: none
+			
+			&::-webkit-scrollbar
+				display: none
+
+			@media screen and (max-width: 1366px)
+				border: 0.07vw solid #CED4DA
+				border-radius: 0.37vw
+				padding: 0.73vw
+				max-height: 21.96vw
+
+			@media screen and (max-width: 767px)
+				border: 0.27vw solid #CED4DA
+				border-radius: 0
+				padding: 2.67vw
+				max-height: 80.00vw
+
+			.result-group
+				margin-bottom: 10px
+
+				&:last-of-type
+					margin-bottom: 0
+
+				@media screen and (max-width: 1366px)
+					margin-bottom: 0.73vw
+
+				@media screen and (max-width: 767px)
+					margin-bottom: 2.67vw
+
+				.title
+					font-size: 12px
+					font-weight: 600
+					line-height: 16px
+					margin-bottom: 10px
+
+					@media screen and (max-width: 1366px)
+						font-size: 0.88vw
+						line-height: 1.17vw
+						margin-bottom: 0.73vw
+
+					@media screen and (max-width: 767px)
+						font-size: 3.20vw
+						line-height: 4.27vw
+						margin-bottom: 2.67vw
+
+				a
+					display: flex
+					padding: 10px 10px
+					text-decoration: none
+					transition: all 100ms $bezier
+					border-radius: 5px
+
+					&:hover
+						background-color: #F2F2F2
+
+					@media screen and (max-width: 1366px)
+						padding: 0.73vw 0.73vw
+						border-radius: 0.37vw
+
+					@media screen and (max-width: 767px)
+						padding: 2.67vw 2.67vw
+						border-radius: 1.33vw
+
+					.image
+						width: 30px
+						height: 30px
+						border-radius: 5px
+						background-position: center
+						background-size: cover
+						margin-right: 10px
+
+						@media screen and (max-width: 1366px)
+							width: 2.20vw
+							height: 2.20vw
+							border-radius: 0.37vw
+							margin-right: 0.73vw
+
+						@media screen and (max-width: 767px)
+							width: 8.00vw
+							height: 8.00vw
+							border-radius: 1.33vw
+							margin-right: 2.67vw
+
+					.text
+						line-height: 30px
+						font-size: 16px
+
+						@media screen and (max-width: 1366px)
+							line-height: 2.20vw
+							font-size: 1.17vw
+
+						@media screen and (max-width: 767px)
+							line-height: 8.00vw
+							font-size: 4.27vw
+
+	.mobile-search-toggle
+		display: none
+		
+		@media screen and (max-width: 767px)
+			display: flex
+			justify-content: center
+			align-items: center
+			margin-right: 1.67vw

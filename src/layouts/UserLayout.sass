@@ -1,0 +1,119 @@
+@import '../sass/variables'
+
+#UserLayout
+	.layout-center-wrap
+		width: 1280px
+		margin: 0 auto
+		padding: 60px 0
+
+		@media screen and (max-width: 1366px)
+			width: 93.70vw
+			padding: 4.39vw 0
+
+		@media screen and (max-width: 767px)
+			width: 100vw
+			padding: 5.33vw
+
+	.flex-container
+		display: flex
+		width: 100%
+		justify-content: space-between
+
+	.nav-wrap
+		margin-right: 50px
+		width: 250px
+
+		@media screen and (max-width: 1023px)
+			display: none
+
+		a, .logout
+			display: flex
+			justify-content: flex-start
+			align-items: center
+			padding: 15px 25px
+			// padding-left: 60px
+			// line-height: 60px
+			font-size: 18px
+			font-weight: 400
+			color: $font-color-normal
+			cursor: pointer
+			// background-size: 26px
+			// background-repeat: no-repeat
+			// background-position: left 17px center
+			text-decoration: none
+			border-radius: 10px
+			margin-bottom: 5px
+
+			&.active, &:hover
+				background-color: $bg-color-light
+				color: $font-color-normal
+
+			&:last-child
+				margin-bottom: 0
+
+			svg
+				margin-right: 10px
+
+			// @media screen and (max-width: 1366px)
+			// 	padding-left: 2.78vw
+			// 	line-height: 2.86vw
+			// 	font-size: 1.17vw
+			// 	background-size: 1.32vw
+			// 	background-position: left 0.73vw center
+
+			// @media screen and (max-width: 767px)
+			// 	padding-left: 0
+			// 	line-height: 13.33vw
+			// 	font-size: 5.33vw
+			// 	background-size: 0
+			// 	color: $font-color-normal
+
+			// 	&.active, &:hover
+			// 		background-color: unset
+			// 		color: $font-color-normal
+
+		.icon1
+			background-image: url(../assets/nav-wallet-blue.svg)
+
+			&.active, &:hover
+				background-image: url(../assets/nav-wallet-white.svg)
+
+		.icon2
+			background-image: url(../assets/nav-transfer-blue.svg)
+
+			&.active, &:hover
+				background-image: url(../assets/nav-transfer-white.svg)
+
+		.icon3
+			background-image: url(../assets/nav-records-blue.svg)
+
+			&.active, &:hover
+				background-image: url(../assets/nav-records-white.svg)
+
+		.icon4
+			background-image: url(../assets/nav-exchange-blue.svg)
+
+			&.active, &:hover
+				background-image: url(../assets/nav-exchange-white.svg)
+
+		.icon5
+			background-image: url(../assets/nav-upgrade-blue.svg)
+
+			&.active, &:hover
+				background-image: url(../assets/nav-upgrade-white.svg)
+
+		.icon6
+			background-image: url(../assets/nav-setting-blue.svg)
+
+			&.active, &:hover
+				background-image: url(../assets/nav-setting-white.svg)
+
+		.icon7
+			background-image: url(../assets/nav-logout-blue.svg)
+
+			&.active, &:hover
+				background-image: url(../assets/nav-logout-white.svg)
+
+	.content-wrap
+		flex-grow: 1
+		width: inherit
